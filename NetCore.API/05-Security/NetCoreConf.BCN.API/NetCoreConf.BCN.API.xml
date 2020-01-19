@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetCoreConf.BCN.API</name>
+    </assembly>
+    <members>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Get">
+            <summary>
+            Get Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.GetById(System.Int32)">
+            <summary>
+            Get Avengers by ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.GetFilmsById(System.Int32)">
+            <summary>
+            Get Films by Avengers 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Post(NetCoreConf.BCN.API.Model.Avenger)">
+            <summary>
+            Add Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Put(System.Int32,NetCoreConf.BCN.API.Model.Avenger)">
+            <summary>
+            Update Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Delete(System.Int32)">
+            <summary>
+            Delete Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v2.AvengersController.Get">
+            <summary>
+            Get Avengers v2
+            </summary>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v3.AvengerController.Get">
+            <summary>
+            Get Avengers
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "ac8c8cf5-d59b-4e6d-b5a3-0d5d250b6195",
+		"name": "NetCoreConfBCN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Avengers",
+			"item": [
+				{
+					"name": "Naming",
+					"item": [
+						{
+							"name": "List All Avenger",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"value": "2.1",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Avenger",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers/111",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers",
+										"111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-version",
+										"value": "2.0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers/111",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers",
+										"111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Avenger",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-api-version",
+										"value": "2.0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t  \"id\": 111,\n      \"name\": \"Thor\",\n      \"urlPhoto\": \"https://heroichollywood.com/wp-content/uploads/2019/05/Thor-Chris-Hemsworth-Avengers-Endgame.jpg\",\n      \"description\": \"Thor el mas prefe de Anna :P\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Uppdate Avenger",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t  \"id\": 111,\n      \"name\": \"Thor El Galactico\",\n      \"urlPhoto\": \"https://heroichollywood.com/wp-content/uploads/2019/05/Thor-Chris-Hemsworth-Avengers-Endgame.jpg\",\n      \"description\": \"Thor el mas prefe de Anna :P\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers/11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6439c2e4-333d-40e4-92ed-fc03e1b0c366",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "c58116d9-ee91-4c90-95c2-8f0d790a6a99",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Versions v1-v2",
+					"item": [
+						{
+							"name": "List All Avenger v1 Http",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"type": "text",
+										"value": "2.0",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1.0/avengers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1.0",
+										"avengers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Shared Version Neutral",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"type": "text",
+										"value": "2.0",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/shared",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"shared"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Avenger v1 Header",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"type": "text",
+										"value": "1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/avenger",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avenger"
+									],
+									"query": [
+										{
+											"key": "x-api-version",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Avenger v2 Header",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"type": "text",
+										"value": "2.1"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/avengers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"avengers"
+									],
+									"query": [
+										{
+											"key": "x-api-version",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Avenger v2 Http",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI2OThhMmM1NC03MjY2LTRlMDktODljNy03ZmNlOWZkMGE4OTIiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc4NTgyOTk0LCJuYmYiOjE1Nzg1ODI5OTQsImV4cCI6MTU3ODU4Njg5NCwiYWlvIjoiNDJOZ1lMRGxQdngvVTR1cVlEcWpJa3Vldzg3RXRQWXIyZEdyQllvVGx1VzBOeGFGM2dJQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJzdWIiOiJudUcxalUwV19Tc21tUEV3QXRHbjhNMGt1YlRMQlNuZFFpcnk3eUcyT1dZIiwidGlkIjoiYjk5OTkyYzYtZDZjNS00MDI4LTk5YjUtYTFmMTA2YmI5MGJjIiwidW5pcXVlX25hbWUiOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXBuIjoiYWRpYXpAZGV2LmVuY2FtaW5hLmNvbSIsInV0aSI6ImUzVlJHWEkxdzAtUnoxQTNNNTBqQUEiLCJ2ZXIiOiIxLjAifQ.SxC1jIRg4vYcBclwZOPM8vWp1b8dg-6gdmCNq5YvWDhqs4mXTwf6f1jJYJASra0P2w3Mrq32RibusebG7696ZOlqwE9lfj0agNoMZ8cAa7lTqfsCK0RVT9aEFv8F_28lfRNd4tdUEgVAxFct5T4qEK0fQScPB1mtW7mL71Q_ahDyg4y4KYk81yAbQsiGykRcJjcX37Aaj6o_wvzU-b3WmOYbASfwfpqfnkcG4KtsI2QM_Cia2Z_49GJ-moUAl3jaDyZJa5qGLtoQMmvSKg3KiKGcW2arcKzDNMFFqSHWQKNtyYhGWH_VdTZ7XiozeHwy3PlR559YJajoNPn7fCQ-AQ",
+										"disabled": true
+									},
+									{
+										"key": "x-api-version",
+										"type": "text",
+										"value": "2.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v2.0/avenger",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v2.0",
+										"avenger"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "OData",
+					"item": [
+						{
+							"name": "Person",
+							"item": [
+								{
+									"name": "ExempleOdataFilter",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "3.0",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$filter=Name eq 'Cody Allen'&$select=Name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "Name eq 'Cody Allen'"
+												},
+												{
+													"key": "$select",
+													"value": "Name"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExempleOdataFilter 2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$filter=startswith(Name, 'C')",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "startswith(Name, 'C')"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExempleOdataFilter 3",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$filter=indexof(Name, 'C') eq 0",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "indexof(Name, 'C') eq 0"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExampleOdataTop",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$top=2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$top",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExampleOdataTop Order By",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$top=2&$orderby=Description",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$top",
+													"value": "2"
+												},
+												{
+													"key": "$orderby",
+													"value": "Description"
+												},
+												{
+													"key": null,
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExampleOdataTop OrderBy Skyp",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$top=2&$orderby=Description&$skip=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$top",
+													"value": "2"
+												},
+												{
+													"key": "$orderby",
+													"value": "Description"
+												},
+												{
+													"key": "$skip",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ExampleODataSelect",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person?$select=Name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person"
+											],
+											"query": [
+												{
+													"key": "$select",
+													"value": "Name"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Avengers",
+							"item": [
+								{
+									"name": "Avenger Filters version 3.0 bad",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-version",
+												"value": "3.0",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/avengers?$filter=name eq 'Thor'",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"avengers"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "name eq 'Thor'"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Avenger Filters version 3.1 good",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-version",
+												"type": "text",
+												"value": "3.1"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/avengers/filter?$filter=name eq 'Thor'",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"avengers",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "name eq 'Thor'"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Avenger Filters version 3.1 Select",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-version",
+												"type": "text",
+												"value": "3.0"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/avengers/filterpage?$filter=name eq 'Thor'",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"avengers",
+												"filterpage"
+											],
+											"query": [
+												{
+													"key": "$filter",
+													"value": "name eq 'Thor'"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authorize",
+			"item": [
+				{
+					"name": "List All  Avenger without role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MjAxOTMyLCJuYmYiOjE1NzkyMDE5MzIsImV4cCI6MTU3OTIwNTgzMiwiYWlvIjoiNDJOZ1lIRFh0c25qWXVGMFYxcHBsV0xhV2ZFN3B1VDNtK2EyczN1dXo3d3g0L3JGcUdRQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6IjkzLjE3Ni4xNDAuNzAiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiQTdOMnlRaTNOa3F5QXB6N0VFZ3dBQSIsInZlciI6IjEuMCJ9.t3Ha6ka6NofLxJS1ArBfZVC46axLLld81QIH6Zc69-0J0wQbaqmfa_7yicbUAP9rtk_44cl70p7YnEp8Rppd27Jb7UfLD_09p_RtjWnzoy6bWXfXkw0wGsgPGJ7bnAqmDsRUEczRfmP8KAQX7dnlLZlWbBaUJpoKqWZIDBggo6A1CqiEQH6BgQATnaoUWQMcee9UgHL9ROsUemt_WszxZEnt-ziqzD4II2tIl-gbi8mH5u0WTzItDnl4WwH6fVJ6EsJ6pslmexNG9MoyEeIo7yaCrs4yvwHJ2HGjYKYdvk-XNg9AI8e2jRRr3JUsRymPRker2eQ5LzfquLNR3-4GpQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MTcyNjU1LCJuYmYiOjE1NzkxNzI2NTUsImV4cCI6MTU3OTE3NjU1NSwiYWlvIjoiNDJOZ1lEaDVuTSs5cmVjOHMvaXBuNXRWdy93V3pSWmtVL3F6ZFhXTVdIbk5jb05uRGhZQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiai1pZWx2TkdPa0NNc1NYTTR5TWFBQSIsInZlciI6IjEuMCJ9.cM5RgYTk-t0X3OyKXXGvnsz81uuz7Ld1ZccVhiEAgZgG19RaW5eUevf5hF4oVO7KpRQirQPYHU6eP5gjef0QdAJCao9HfvFQb_xomX7jTXpvO9_mAnp5l1Sr4GUZNBtHZR2yZY6hxvbLY9-kHx3JEpymOrfMYTDAOgfX64FQ6yBpKyjCC4ok5fVvK_EILlZ-dfHaKYceM5kxIQsHEtoi7bzdtJuhFZ1bOMs5-zl8HBf4dGFrNm1ITaX_ZDhifg47p3cQhwqbsFwpbrqD7KidhHbJXMPzzOQSsyCpHzTAkMiVbaphBSdPvX9gQ0aK5Ln1pnRpUC6Z3Z48ojYcebFYsQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/avengers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avengers"
+							]
+						},
+						"description": "{{baseUrl}}/api/avenger"
+					},
+					"response": []
+				},
+				{
+					"name": "List Hulk",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MjAxOTMyLCJuYmYiOjE1NzkyMDE5MzIsImV4cCI6MTU3OTIwNTgzMiwiYWlvIjoiNDJOZ1lIRFh0c25qWXVGMFYxcHBsV0xhV2ZFN3B1VDNtK2EyczN1dXo3d3g0L3JGcUdRQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6IjkzLjE3Ni4xNDAuNzAiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiQTdOMnlRaTNOa3F5QXB6N0VFZ3dBQSIsInZlciI6IjEuMCJ9.t3Ha6ka6NofLxJS1ArBfZVC46axLLld81QIH6Zc69-0J0wQbaqmfa_7yicbUAP9rtk_44cl70p7YnEp8Rppd27Jb7UfLD_09p_RtjWnzoy6bWXfXkw0wGsgPGJ7bnAqmDsRUEczRfmP8KAQX7dnlLZlWbBaUJpoKqWZIDBggo6A1CqiEQH6BgQATnaoUWQMcee9UgHL9ROsUemt_WszxZEnt-ziqzD4II2tIl-gbi8mH5u0WTzItDnl4WwH6fVJ6EsJ6pslmexNG9MoyEeIo7yaCrs4yvwHJ2HGjYKYdvk-XNg9AI8e2jRRr3JUsRymPRker2eQ5LzfquLNR3-4GpQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MTcyNjU1LCJuYmYiOjE1NzkxNzI2NTUsImV4cCI6MTU3OTE3NjU1NSwiYWlvIjoiNDJOZ1lEaDVuTSs5cmVjOHMvaXBuNXRWdy93V3pSWmtVL3F6ZFhXTVdIbk5jb05uRGhZQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiai1pZWx2TkdPa0NNc1NYTTR5TWFBQSIsInZlciI6IjEuMCJ9.cM5RgYTk-t0X3OyKXXGvnsz81uuz7Ld1ZccVhiEAgZgG19RaW5eUevf5hF4oVO7KpRQirQPYHU6eP5gjef0QdAJCao9HfvFQb_xomX7jTXpvO9_mAnp5l1Sr4GUZNBtHZR2yZY6hxvbLY9-kHx3JEpymOrfMYTDAOgfX64FQ6yBpKyjCC4ok5fVvK_EILlZ-dfHaKYceM5kxIQsHEtoi7bzdtJuhFZ1bOMs5-zl8HBf4dGFrNm1ITaX_ZDhifg47p3cQhwqbsFwpbrqD7KidhHbJXMPzzOQSsyCpHzTAkMiVbaphBSdPvX9gQ0aK5Ln1pnRpUC6Z3Z48ojYcebFYsQ",
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/FeatureAvengers/featurehulk",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FeatureAvengers",
+								"featurehulk"
+							]
+						},
+						"description": "{{baseUrl}}/api/avenger"
+					},
+					"response": []
+				},
+				{
+					"name": "List Feature With Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MjAxOTMyLCJuYmYiOjE1NzkyMDE5MzIsImV4cCI6MTU3OTIwNTgzMiwiYWlvIjoiNDJOZ1lIRFh0c25qWXVGMFYxcHBsV0xhV2ZFN3B1VDNtK2EyczN1dXo3d3g0L3JGcUdRQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6IjkzLjE3Ni4xNDAuNzAiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiQTdOMnlRaTNOa3F5QXB6N0VFZ3dBQSIsInZlciI6IjEuMCJ9.t3Ha6ka6NofLxJS1ArBfZVC46axLLld81QIH6Zc69-0J0wQbaqmfa_7yicbUAP9rtk_44cl70p7YnEp8Rppd27Jb7UfLD_09p_RtjWnzoy6bWXfXkw0wGsgPGJ7bnAqmDsRUEczRfmP8KAQX7dnlLZlWbBaUJpoKqWZIDBggo6A1CqiEQH6BgQATnaoUWQMcee9UgHL9ROsUemt_WszxZEnt-ziqzD4II2tIl-gbi8mH5u0WTzItDnl4WwH6fVJ6EsJ6pslmexNG9MoyEeIo7yaCrs4yvwHJ2HGjYKYdvk-XNg9AI8e2jRRr3JUsRymPRker2eQ5LzfquLNR3-4GpQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MTcyNjU1LCJuYmYiOjE1NzkxNzI2NTUsImV4cCI6MTU3OTE3NjU1NSwiYWlvIjoiNDJOZ1lEaDVuTSs5cmVjOHMvaXBuNXRWdy93V3pSWmtVL3F6ZFhXTVdIbk5jb05uRGhZQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiai1pZWx2TkdPa0NNc1NYTTR5TWFBQSIsInZlciI6IjEuMCJ9.cM5RgYTk-t0X3OyKXXGvnsz81uuz7Ld1ZccVhiEAgZgG19RaW5eUevf5hF4oVO7KpRQirQPYHU6eP5gjef0QdAJCao9HfvFQb_xomX7jTXpvO9_mAnp5l1Sr4GUZNBtHZR2yZY6hxvbLY9-kHx3JEpymOrfMYTDAOgfX64FQ6yBpKyjCC4ok5fVvK_EILlZ-dfHaKYceM5kxIQsHEtoi7bzdtJuhFZ1bOMs5-zl8HBf4dGFrNm1ITaX_ZDhifg47p3cQhwqbsFwpbrqD7KidhHbJXMPzzOQSsyCpHzTAkMiVbaphBSdPvX9gQ0aK5Ln1pnRpUC6Z3Z48ojYcebFYsQ",
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/FeatureAvengers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FeatureAvengers"
+							]
+						},
+						"description": "{{baseUrl}}/api/avenger"
+					},
+					"response": []
+				},
+				{
+					"name": "List ViudaNegra",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MjAxOTMyLCJuYmYiOjE1NzkyMDE5MzIsImV4cCI6MTU3OTIwNTgzMiwiYWlvIjoiNDJOZ1lIRFh0c25qWXVGMFYxcHBsV0xhV2ZFN3B1VDNtK2EyczN1dXo3d3g0L3JGcUdRQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6IjkzLjE3Ni4xNDAuNzAiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiQTdOMnlRaTNOa3F5QXB6N0VFZ3dBQSIsInZlciI6IjEuMCJ9.t3Ha6ka6NofLxJS1ArBfZVC46axLLld81QIH6Zc69-0J0wQbaqmfa_7yicbUAP9rtk_44cl70p7YnEp8Rppd27Jb7UfLD_09p_RtjWnzoy6bWXfXkw0wGsgPGJ7bnAqmDsRUEczRfmP8KAQX7dnlLZlWbBaUJpoKqWZIDBggo6A1CqiEQH6BgQATnaoUWQMcee9UgHL9ROsUemt_WszxZEnt-ziqzD4II2tIl-gbi8mH5u0WTzItDnl4WwH6fVJ6EsJ6pslmexNG9MoyEeIo7yaCrs4yvwHJ2HGjYKYdvk-XNg9AI8e2jRRr3JUsRymPRker2eQ5LzfquLNR3-4GpQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSIsImtpZCI6InBpVmxsb1FEU01LeGgxbTJ5Z3FHU1ZkZ0ZwQSJ9.eyJhdWQiOiI3OGE4NjlhNy0zNjVjLTQ2MTEtYTUwNy02YTNhNTNhYzFhYzEiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMvIiwiaWF0IjoxNTc5MTcyNjU1LCJuYmYiOjE1NzkxNzI2NTUsImV4cCI6MTU3OTE3NjU1NSwiYWlvIjoiNDJOZ1lEaDVuTSs5cmVjOHMvaXBuNXRWdy93V3pSWmtVL3F6ZFhXTVdIbk5jb05uRGhZQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJEaWF6IiwiZ2l2ZW5fbmFtZSI6IkFkcmlhbiIsImlwYWRkciI6Ijg1LjU1LjExOC4xNzUiLCJuYW1lIjoiQWRyaWFuIERpYXoiLCJvaWQiOiIwNWVlZjIxOC1hYTAzLTQ1ODctODdiMC0wZDY4ZDZmNTJhY2UiLCJyb2xlcyI6WyJIdWxrIl0sInN1YiI6Ikotd3hjS1BRVFhTRHo5SWRPMXREVzAtY0stWUI2WHhWaVQ5ZkNCbXJET3ciLCJ0aWQiOiJiOTk5OTJjNi1kNmM1LTQwMjgtOTliNS1hMWYxMDZiYjkwYmMiLCJ1bmlxdWVfbmFtZSI6ImFkaWF6QGRldi5lbmNhbWluYS5jb20iLCJ1cG4iOiJhZGlhekBkZXYuZW5jYW1pbmEuY29tIiwidXRpIjoiai1pZWx2TkdPa0NNc1NYTTR5TWFBQSIsInZlciI6IjEuMCJ9.cM5RgYTk-t0X3OyKXXGvnsz81uuz7Ld1ZccVhiEAgZgG19RaW5eUevf5hF4oVO7KpRQirQPYHU6eP5gjef0QdAJCao9HfvFQb_xomX7jTXpvO9_mAnp5l1Sr4GUZNBtHZR2yZY6hxvbLY9-kHx3JEpymOrfMYTDAOgfX64FQ6yBpKyjCC4ok5fVvK_EILlZ-dfHaKYceM5kxIQsHEtoi7bzdtJuhFZ1bOMs5-zl8HBf4dGFrNm1ITaX_ZDhifg47p3cQhwqbsFwpbrqD7KidhHbJXMPzzOQSsyCpHzTAkMiVbaphBSdPvX9gQ0aK5Ln1pnRpUC6Z3Z48ojYcebFYsQ",
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/FeatureAvengers/featureviudanegra",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FeatureAvengers",
+								"featureviudanegra"
+							]
+						},
+						"description": "{{baseUrl}}/api/avenger"
+					},
+					"response": []
+				},
+				{
+					"name": "HandlerHUlk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/FeatureAvengers/11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"FeatureAvengers",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a343284d-1462-492f-8a21-3005d29a88aa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "315109b2-f44b-430b-b7ac-39db5418ba61",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

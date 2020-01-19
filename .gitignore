@@ -1,0 +1,25 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NetCore.API/.vs/NetCore.API/v16
+/.vs
+/NetCore.API/NetCore.API/obj
+/NetCore.API/NetCore.API/Properties
+/NetCore.API/.vs/NetCore.API
+/NetCore.API/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1
+/NetCore.API/NetCoreConf.BCN.API/obj
+/NetCore.API/01-Nomenclatura/.vs/NetCore.API
+/NetCore.API/01-Nomenclatura/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1
+/NetCore.API/01-Nomenclatura/NetCoreConf.BCN.API/obj
+/NetCore.API/02-Swagger/.vs/NetCore.API
+/NetCore.API/02-Swagger/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1
+/NetCore.API/02-Swagger/NetCoreConf.BCN.API/obj
+/NetCore.API/03-Versioning/.vs/NetCore.API
+/NetCore.API/03-Versioning/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1
+/NetCore.API/03-Versioning/NetCoreConf.BCN.API/obj
+/NetCore.API/04-OData/.vs/NetCore.API
+/NetCore.API/04-OData/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1
+/NetCore.API/04-OData/NetCoreConf.BCN.API/obj
+/NetCore.API/05-Security/.vs/NetCore.API
+/NetCore.API/05-Security/NetCoreConf.BCN.API/bin/Debug/netcoreapp3.1

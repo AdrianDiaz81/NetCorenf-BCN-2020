@@ -1,0 +1,60 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": []
+  },
+  "packageFolders": {
+    "C:\\Users\\adiaz\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\adiaz\\Source\\Repos\\NetCoreConf2020\\NetCore.API\\05-Security\\NetCoreConf.BCN.API\\NetCoreConf.BCN.API.csproj",
+      "projectName": "NetCoreConf.BCN.API",
+      "projectPath": "C:\\Users\\adiaz\\Source\\Repos\\NetCoreConf2020\\NetCore.API\\05-Security\\NetCoreConf.BCN.API\\NetCoreConf.BCN.API.csproj",
+      "packagesPath": "C:\\Users\\adiaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adiaz\\Source\\Repos\\NetCoreConf2020\\NetCore.API\\05-Security\\NetCoreConf.BCN.API\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\adiaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://adriandiazcervera.pkgs.visualstudio.com/_packaging/NetCoreConfFeed/nuget/v3/index.json": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://encamina.pkgs.visualstudio.com/_packaging/ENMARCHA.Core/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}
