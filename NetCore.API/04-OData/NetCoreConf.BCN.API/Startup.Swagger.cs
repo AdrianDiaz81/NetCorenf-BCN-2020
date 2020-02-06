@@ -53,8 +53,7 @@
                     c.IgnoreObsoleteProperties();
                     c.IgnoreObsoleteActions();
                     c.DescribeAllParametersInCamelCase();
-                    c.CustomSchemaIds(x => x.FullName);
-                    c.OperationFilter<ODataQueryOptionsFilter>();
+                    c.CustomSchemaIds(x => x.FullName);                    
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                     c.IncludeXmlComments(xmlPath);
