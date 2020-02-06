@@ -13,10 +13,7 @@
     using Swashbuckle.AspNetCore.Annotations;
 
     [ApiVersion("4.0")]
-    [ODataRoutePrefix("Avengers")]
-    [Route("api/[controller]")]
-    //[Route("api/v{v:apiVersion}/[controller]")]
-    // [ApiController]
+    [ODataRoutePrefix("Avengers")] 
     public class AvengersController : ODataController
     {
         private readonly IAvengerDomain avengerDomain;
@@ -34,8 +31,10 @@
         [SwaggerResponse(StatusCodes.Status200OK, "Get Avengers successfully", typeof(IEnumerable<Avenger>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", typeof(ValidationProblemDetails))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
-        [HttpGet]
-        public async Task<IActionResult> Getv31(ODataQueryOptions<Avenger> filter)
+        [HttpGet(Name = "Get All Avengers 4")]
+        [EnableQuery()]
+        [ODataRoute("")]
+        public async Task<IActionResult> Getv40(ODataQueryOptions<Avenger> filter)
         {
 
             var result = avengerDomain.GetAllAsync(filter);

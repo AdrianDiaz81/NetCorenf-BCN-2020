@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetCoreConf.BCN.API</name>
+    </assembly>
+    <members>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Get">
+            <summary>
+            Get Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.GetById(System.Int32)">
+            <summary>
+            Get Avengers by ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.AvengerFilm(System.Int32)">
+            <summary>
+            Get Films by Avengers 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Post(NetCoreConf.BCN.API.Model.Avenger)">
+            <summary>
+            Add Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Put(System.Int32,NetCoreConf.BCN.API.Model.Avenger)">
+            <summary>
+            Update Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v1.AvengersController.Delete(System.Int32)">
+            <summary>
+            Delete Avengers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v2.AvengersController.Get">
+            <summary>
+            Get Avengers v2
+            </summary>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.API.Avengers.v3.AvengersController.Get">
+            <summary>
+            Get Avengers
+            </summary>
+        </member>
+        <member name="T:NetCoreConf.BCN.API.Extensions.ODataQueryOptionsFilter">
+            <summary>
+            ODataQueryOptionsFilter
+            </summary>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.Extensions.ODataQueryOptionsFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Apply
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures services for the application.
+            </summary>
+            <param name="services">The collection of services to configure the application with.</param>
+        </member>
+        <member name="M:NetCoreConf.BCN.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder,Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            Configures the application using the provided builder, hosting environment, and logging factory.
+            </summary>
+            <param name="app">The current application builder.</param>
+            <param name="env">The current application environment.</param>
+            <param name="modelBuilder">The <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder">model builder</see> used to create OData entity data models (EDMs).</param>
+            <param name="provider">The API version descriptor provider used to enumerate defined API versions.</param>
+        </member>
+    </members>
+</doc>

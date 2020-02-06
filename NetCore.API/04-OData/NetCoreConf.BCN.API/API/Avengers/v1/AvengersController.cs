@@ -2,18 +2,18 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using Microsoft.AspNet.OData;
+    using Microsoft.AspNet.OData.Routing;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using NetCoreConf.BCN.API.Domain;
     using NetCoreConf.BCN.API.Model;
     using Swashbuckle.AspNetCore.Annotations;
-    [ApiVersion("1.0")]
-    //[ApiVersion("1.0", Deprecated = true)]
-    // [Route("api/v{v:apiVersion}/[controller]")]
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AvengersController : ControllerBase
+
+    [ApiVersion("1.0")] 
+    [ODataRoutePrefix("Avengers")]
+    public class AvengersController : ODataController
     {
 
         private readonly IAvengerDomain avengerDomain;
@@ -31,6 +31,8 @@
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", typeof(ValidationProblemDetails))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
         [HttpGet(Name = "Get All Avengers")]
+        [EnableQuery()]
+        [ODataRoute] 
         public async Task<IActionResult> Get()
         {
             var result = await avengerDomain.GetAllAsync();
@@ -41,10 +43,11 @@
         /// Get Avengers by ID
         /// </summary>
         /// <returns></returns>
-        [HttpGet("{id}", Name = "GetByIDAvenger")]
-        public async Task<IActionResult> GetById(int id)
-        {
-            var result = await avengerDomain.GetByIdAsync(id);
+        [HttpGet(Name = "GetByIDAvenger")] 
+        [ODataRoute("({key})")]
+        public async Task<IActionResult> GetById([FromODataUri] int key)
+        { 
+            var result = await avengerDomain.GetByIdAsync(key);
             return Ok(result);
         }
 
@@ -52,12 +55,12 @@
         /// Get Films by Avengers 
         /// </summary>
         /// <returns></returns>
-        [HttpGet("{id}/films", Name = "GetByFilmsIDAvenger")]
-        public async Task<IActionResult> GetFilmsById(int id)
+        [HttpGet(Name = "GetByFilmsIDAvenger")]
+        [ODataRoute("({key})/AvengerFilm")]
+        public async Task<IActionResult> AvengerFilm([FromODataUri] int key)
         {
-            
-            
-            var result =  await avengerDomain.GetAllFilmsByIdAsync(id);
+
+            var result = await avengerDomain.GetAllFilmsByIdAsync(key);
             return Ok(result);
         }
 
@@ -65,7 +68,8 @@
         /// Add Avengers
         /// </summary>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost(Name = "Create Avenger")]
+        [ODataRoute]  
         public async Task<IActionResult> Post([FromBody]Avenger avenger)
         {
             var result = await avengerDomain.InsertAsync(avenger);
@@ -76,8 +80,9 @@
         /// Update Avengers
         /// </summary>
         /// <returns></returns>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody]Avenger avenger)
+        [HttpPut(Name = "Update Avenger")]
+        [ODataRoute("({key})")] 
+        public async Task<IActionResult> Put([FromODataUri] int key, [FromBody]Avenger avenger)
         {
             var result = await avengerDomain.UpdateAsync(avenger);
             if (!result)
@@ -91,10 +96,11 @@
         /// Delete Avengers
         /// </summary>
         /// <returns></returns>
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete(Name = "Delete Avenger")]
+        [ODataRoute("({key})")]
+        public async Task<IActionResult> Delete([FromODataUri] int key)
         {
-            var result = await avengerDomain.DeleteAsync(id);
+            var result = await avengerDomain.DeleteAsync(key);
             if (!result)
             {
                 return NotFound();

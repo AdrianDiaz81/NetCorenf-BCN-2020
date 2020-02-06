@@ -1,8 +1,9 @@
 ﻿namespace NetCoreConf.BCN.API
-{    
+{
     using Microsoft.AspNetCore.Mvc.ApiExplorer;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.OpenApi.Models;    
+    using Microsoft.OpenApi.Models;
+    using NetCoreConf.BCN.API.Extensions;
     using System;
     using System.IO;
     using System.Reflection;
@@ -52,6 +53,8 @@
                     c.IgnoreObsoleteProperties();
                     c.IgnoreObsoleteActions();
                     c.DescribeAllParametersInCamelCase();
+                    c.CustomSchemaIds(x => x.FullName);
+                    c.OperationFilter<ODataQueryOptionsFilter>();
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                     c.IncludeXmlComments(xmlPath);

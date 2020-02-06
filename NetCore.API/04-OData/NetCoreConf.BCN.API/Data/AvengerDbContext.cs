@@ -24,15 +24,7 @@
         {
 
             modelBuilder.Entity<AvengerFilm>()
-        .HasKey(bc => new { bc.AvengerId, bc.FilmId });
-            modelBuilder.Entity<AvengerFilm>()
-                .HasOne(bc => bc.Avenger)
-                .WithMany(b => b.AvengerFilm)
-                .HasForeignKey(bc => bc.AvengerId);
-            modelBuilder.Entity<AvengerFilm>()
-                .HasOne(bc => bc.Film)
-                .WithMany(c => c.AvengerFilm)
-                .HasForeignKey(bc => bc.FilmId);
+                .HasKey(bc => new { bc.AvengerId, bc.FilmId });            
 
             var dataCustomer = JObject.Parse(File.ReadAllText(@"./Data/avengers.json"));
             var customerCollection = (JArray)dataCustomer["d"];
