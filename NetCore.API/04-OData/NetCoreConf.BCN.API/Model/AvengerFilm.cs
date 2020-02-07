@@ -5,10 +5,8 @@ namespace NetCoreConf.BCN.API.Model
     public class AvengerFilm:Base
     {
         [Required]
-        public int AvengerId { get; set; }
-        public Avenger Avenger { get; set; }
+        public int AvengerId { get; set; } 
         [Required]
-        public int FilmId { get; set; }
-        public Film Film { get; set; }
+        public int FilmId { get; set; } 
     }
 }

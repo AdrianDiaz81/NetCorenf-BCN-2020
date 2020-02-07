@@ -15,10 +15,7 @@
     [ApiVersion("3.0")]
     [ApiVersion("3.1")]
     [ApiVersion("3.2")]
-    // [ODataRoutePrefix("Avengers")]
-    [Route("api/[controller]")]
-    //[Route("api/v{v:apiVersion}/[controller]")]
-    // [ApiController]
+    [ODataRoutePrefix("Avengers")] 
     public class AvengersController : ODataController
     {
         private readonly IAvengerDomain avengerDomain;
@@ -35,8 +32,10 @@
         [SwaggerResponse(StatusCodes.Status200OK, "Get Avengers successfully", typeof(IEnumerable<Avenger>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", typeof(ValidationProblemDetails))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
-        [HttpGet(Name = "Get All Avengers 3")]
+        [HttpGet(Name = "Get All Avengers 3.0")]
         [EnableQuery()]
+        [ODataRoute("")] 
+        [MapToApiVersion("3.0")]
         public async Task<IActionResult> Get()
         {
             var result = await avengerDomain.GetAllAsync();
@@ -48,9 +47,10 @@
         [SwaggerResponse(StatusCodes.Status200OK, "Get Avengers successfully", typeof(IEnumerable<Avenger>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", typeof(ValidationProblemDetails))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
-        [HttpGet, MapToApiVersion("3.1")]
-        [Route("Filter")]
-      
+        [HttpGet(Name = "Get All Avengers 3.1")]
+        [ODataRoute("")]
+        [MapToApiVersion("3.1")]
+
         public async Task<IActionResult> Getv31(ODataQueryOptions<Avenger> filter)
         {
 
@@ -65,10 +65,10 @@
         [SwaggerResponse(StatusCodes.Status200OK, "Get Avengers successfully", typeof(IEnumerable<Avenger>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid input data", typeof(ValidationProblemDetails))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal Server Error", null)]
-        //[HttpGet, MapToApiVersion("3.2")]
-        [HttpGet]
-        [Route("FilterPage")]
+        [HttpGet(Name = "Get All Avengers 3.2")]
         [EnableQuery()]
+        [ODataRoute("")]
+        [MapToApiVersion("3.2")]
         public IActionResult Getv32(ODataQueryOptions<Avenger> filter)
         {
 
