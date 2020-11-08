@@ -1,5 +1,5 @@
 # NetCorenf Barcelona 18 de Enero de 2020
-Sesión impartoda el 18 de Enero en el que mostramos los pasos que debemos de seguir para poder montar una API y que nos sintamos orgulloso de ella 
+Sesión impartida el 18 de Enero en el que mostramos los pasos que debemos de seguir para poder montar una API y que nos sintamos orgulloso de ella 
 
 ## Contenido del Repo
 
